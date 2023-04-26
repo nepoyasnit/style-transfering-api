@@ -33,9 +33,9 @@ class ImageProcessing:
 
         # Записываем изображение в буфер,
         # в таком виде его надо отправлять пользователю
-        bio = BytesIO()
-        bio.name = 'output.jpeg'
-        image.save(bio, 'JPEG')
-        bio.seek(0)
+        # bio = BytesIO()
+        # bio.name = 'output.jpeg'
+        # image.save(bio, 'JPEG')
+        # bio.seek(0)
 
-        return bio
+        return image

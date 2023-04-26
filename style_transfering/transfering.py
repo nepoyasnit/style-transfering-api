@@ -21,7 +21,7 @@ class StyleTransfer:
     def get_style_model_and_losses(self, style_img, content_img):
 
         # Загружаем наши сохранённые 11 слоёв от VGG19 и используем как базу для создания сетки.
-        cnn = torch.load('./load_model/vgg19_11_layers.pth', map_location=self.device)
+        cnn = torch.load('./weights/vgg19_11_layers.pth', map_location=self.device)
         cnn = cnn.to(self.device).eval()
 
         normalization = Normalization(self.device).to(self.device)
